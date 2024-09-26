@@ -36,7 +36,7 @@ with st.container():
 # Show title and description.
 st.title("CuesTalent")
 st.write(
-    "This is a Cuesta chatbot that uses OpenAI's GPT-3.5 model to generate responses from internal data. "
+    "This is a Cuesta chatbot that uses OpenAI's GPT4o model to generate responses from internal data. "
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
