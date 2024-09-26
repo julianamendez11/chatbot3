@@ -42,13 +42,9 @@ st.write(
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
-openai_api_key = st.text_input("OpenAI API Key", type="password")
-if not openai_api_key:
-    st.info("Please add your OpenAI API key to continue.", icon="🗝️")
-else:
 
-    # Create an OpenAI client.
-    client = OpenAI(api_key=openai_api_key)
+# Create an OpenAI client.
+client = OpenAI(api_key="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")
 
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
@@ -65,7 +61,7 @@ else:
     if prompt := st.chat_input("What do you want to know about Cuesta Skills, Methodologies, Industry/Function Expertise??"):
 
         # Store and display the current prompt.
-        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.messages.append({"role": "user", "content": "Simon Lopera has worked in AWS and Power BI" + prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
 
